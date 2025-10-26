@@ -4,7 +4,7 @@
     .equ SIZE_STACK, 1024
     .equ SIZE_STACK_SHIFT_LEFT, 10
 
-    .equ BASE_ADDRESS_UART, 128
+    .equ BASE_ADDRESS_UART, 268435456
 
     .equ RECEIVE_HOLDING_REGISTER, 0
     .equ TRANSMIT_HOLDING_REGISTER, 0
@@ -58,6 +58,9 @@ _start:
 
     li a0, 33
     jal uart_write
+
+    while:
+    j while
 
     .data
 stacks:
