@@ -59,9 +59,6 @@ _start:
     li a0, 33
     jal uart_write
 
-    while:
-    j while
-
     .data
 stacks:
     .skip SIZE_STACK * MAXIMUM_NUMBER_HART
